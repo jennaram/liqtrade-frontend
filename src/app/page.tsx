@@ -7,7 +7,7 @@ export default function Home() {
       {/* Navbar */}
       <nav className="flex justify-between items-center px-6 py-4">
         <div className="flex items-center">
-          <Image src="/logo.svg" alt="Liqtrade" width={120} height={30} />
+          <Image src="/images/logoliqtrade.png" alt="Liqtrade" width={120} height={30} className="object-contain" />
         </div>
         <div className="flex items-center space-x-6">
           <Link href="/pret" className="text-gray-700">Prêt</Link>

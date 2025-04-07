@@ -45,7 +45,7 @@ export default function Home() {
         </div>
         <div className="w-1/2 relative">
           <Image 
-            src="/hero-image.png" 
+            src="/images/app_img.png" 
             alt="Application mobile Liqtrade" 
             width={500} 
             height={600}

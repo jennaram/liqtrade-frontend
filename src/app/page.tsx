@@ -5,20 +5,35 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       {/* Navbar */}
-      <nav className="flex justify-between items-center px-6 py-4">
+      <nav className="flex items-center justify-between px-12 py-6 max-w-[1400px] mx-auto">
+        {/* Logo et éléments de gauche */}
         <div className="flex items-center">
           <Image src="/images/logoliqtrade.png" alt="Liqtrade" width={120} height={30} className="object-contain" />
+          <div className="flex ml-40">
+            <span className="text-gray-800 text-base font-medium cursor-pointer hover:text-gray-600 mr-40">Prêt</span>
+            <span className="text-gray-800 text-base font-medium cursor-pointer hover:text-gray-600">Affacturage</span>
+          </div>
         </div>
-        <div className="flex items-center space-x-6">
-          <Link href="/pret" className="text-gray-700">Prêt</Link>
-          <Link href="/affacturage" className="text-gray-700">Affacturage</Link>
-          <Link href="/simulateur" className="text-gray-700">Simulateur</Link>
-          <Link href="/contact" className="text-gray-700">Contact</Link>
-          <Link href="/publications" className="text-gray-700">Publications</Link>
-          <Link href="/inscription" className="text-emerald-500 hover:text-emerald-600">S'inscrire</Link>
-          <Link href="/connexion" className="bg-emerald-500 text-white px-4 py-2 rounded-lg hover:bg-emerald-600">
-            Se connecter
-          </Link>
+
+        {/* Éléments de droite */}
+        <div className="flex items-center">
+          <div className="flex">
+            <span className="text-gray-800 text-base font-medium cursor-pointer hover:text-gray-600 mr-40">Simulateur</span>
+            <span className="text-gray-800 text-base font-medium cursor-pointer hover:text-gray-600 mr-40">Contact</span>
+            <span className="text-gray-800 text-base font-medium cursor-pointer hover:text-gray-600 mr-40">Publications</span>
+          </div>
+          <div className="flex items-center gap-4">
+            <button 
+              className="bg-white text-[#22C55E] hover:bg-gray-50 text-base font-medium px-10 py-5 rounded-md transition-all duration-200 min-w-[160px] border border-[#22C55E]"
+            >
+              S&apos;inscrire
+            </button>
+            <button 
+              className="bg-[#22C55E] text-white hover:bg-[#16A34A] text-base font-medium px-10 py-5 rounded-md transition-all duration-200 min-w-[160px]"
+            >
+              Se connecter
+            </button>
+          </div>
         </div>
       </nav>
 

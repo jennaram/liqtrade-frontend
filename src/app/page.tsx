@@ -9,8 +9,8 @@ export default function Home() {
         {/* Logo et éléments de gauche */}
         <div className="flex flex-col md:flex-row items-center w-full md:w-auto mb-4 md:mb-0">
           <Image src="/images/logoliqtrade.png" alt="Liqtrade" width={120} height={30} className="object-contain mb-4 md:mb-0" />
-          <div className="flex flex-col md:flex-row md:ml-8 lg:ml-40 space-y-4 md:space-y-0">
-            <span className="text-gray-800 text-base font-medium cursor-pointer hover:text-gray-600 md:mr-8 lg:mr-40 text-center">Prêt</span>
+          <div className="flex flex-col md:flex-row md:ml-8 space-y-4 md:space-y-0">
+            <span className="text-gray-800 text-base font-medium cursor-pointer hover:text-gray-600 md:mr-8 text-center">Prêt</span>
             <span className="text-gray-800 text-base font-medium cursor-pointer hover:text-gray-600 text-center">Affacturage</span>
           </div>
         </div>
@@ -18,11 +18,11 @@ export default function Home() {
         {/* Éléments de droite */}
         <div className="flex flex-col md:flex-row items-center w-full md:w-auto">
           <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 mb-4 md:mb-0 w-full md:w-auto">
-            <span className="text-gray-800 text-base font-medium cursor-pointer hover:text-gray-600 md:mr-8 lg:mr-40 text-center">Simulateur</span>
-            <span className="text-gray-800 text-base font-medium cursor-pointer hover:text-gray-600 md:mr-8 lg:mr-40 text-center">Contact</span>
-            <span className="text-gray-800 text-base font-medium cursor-pointer hover:text-gray-600 md:mr-8 lg:mr-40 text-center">Publications</span>
+            <span className="text-gray-800 text-base font-medium cursor-pointer hover:text-gray-600 md:ml-40 md:mr-8 lg:mr-12 text-center whitespace-nowrap">Simulateur</span>
+            <span className="text-gray-800 text-base font-medium cursor-pointer hover:text-gray-600 md:mr-8 lg:mr-12 text-center whitespace-nowrap">Contact</span>
+            <span className="text-gray-800 text-base font-medium cursor-pointer hover:text-gray-600 md:mr-8 lg:mr-12 text-center whitespace-nowrap">Publications</span>
           </div>
-          <div className="flex flex-col md:flex-row items-center gap-4 w-full md:w-auto">
+          <div className="flex flex-col md:flex-row items-center gap-4 w-full md:w-auto md:ml-8">
             <button 
               className="bg-white text-[#22C55E] hover:bg-gray-50 text-base font-medium px-6 md:px-10 py-3 md:py-5 rounded-md transition-all duration-200 w-full md:min-w-[160px] border border-[#22C55E]"
             >

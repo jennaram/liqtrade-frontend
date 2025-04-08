@@ -16,7 +16,7 @@ const HeroSection = () => {
             sans garantie personnelle
           </p>
           <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8">
-            <Link href="/connexion" className="bg-[#22C55E] text-white px-6 py-3 rounded-lg hover:bg-[#16A34A] text-center">
+            <Link href="/dashboard" className="bg-[#22C55E] text-white px-6 py-3 rounded-lg hover:bg-[#16A34A] text-center">
               Se connecter
             </Link>
             <Link href="/inscription" className="text-[#22C55E] hover:text-[#16A34A] inline-flex items-center justify-center md:justify-start no-underline group">

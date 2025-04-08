@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Navbar = () => {
   return (
@@ -25,11 +26,12 @@ const Navbar = () => {
           >
             S&apos;inscrire
           </button>
-          <button 
+          <Link 
+            href="/dashboard"
             className="bg-[#22C55E] text-white hover:bg-[#16A34A] text-sm font-medium px-6 py-2.5 rounded-md transition-all duration-200 w-full md:w-[120px] whitespace-nowrap flex items-center justify-center"
           >
             Se connecter
-          </button>
+          </Link>
         </div>
       </div>
     </nav>

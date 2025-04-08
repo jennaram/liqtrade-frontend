@@ -75,36 +75,60 @@ export default function Home() {
 
       {/* Services Section */}
       <section className="bg-gray-50 px-4 md:px-12 py-8 md:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-          <div>
-            <Link href="/prets" className="text-xl md:text-2xl font-semibold flex items-center text-gray-800 mb-4 justify-center md:justify-start">
-              Prêts <span className="ml-2">→</span>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-24">
+          <div className="md:ml-24">
+            <Link href="/prets" className="text-xl md:text-2xl font-medium flex items-center text-[#22C55E] mb-8 justify-center md:justify-start group">
+              Prêts <span className="ml-2 text-2xl group-hover:translate-x-1 transition-transform">→</span>
             </Link>
-            <Link href="/affacturage" className="text-xl md:text-2xl font-semibold flex items-center text-gray-800 justify-center md:justify-start">
-              Affacturage <span className="ml-2">→</span>
+            <Link href="/affacturage" className="text-xl md:text-2xl font-medium flex items-center text-gray-400 justify-center md:justify-start group">
+              Affacturage <span className="ml-2 text-2xl group-hover:translate-x-1 transition-transform">→</span>
             </Link>
           </div>
-          <div>
-            <p className="text-gray-600 mb-4 text-center md:text-left">Des taux compétitifs en quelques clics.</p>
-            <p className="text-gray-600 mb-8 text-center md:text-left">
+          <div className="md:max-w-xl">
+            <p className="text-gray-800 text-lg mb-2 text-center md:text-left">Des taux compétitifs en quelques clics.</p>
+            <p className="text-gray-600 mb-12 text-center md:text-left leading-relaxed">
               Quel que soit votre projet, nous vous accompagnons de manière bienveillante avec les meilleurs 
-              outils en ligne. Liqtrade propose du financement à court terme le financement professionnel à court 
+              outils en ligne. Oubliez le parcours du combattant, à vous le financement professionnel à court 
               terme. Chez Liqtrade nous vous aidons à évoluer à travers des solutions de financement simples, 
               efficaces et compétitives en seulement quelques clics.
             </p>
-            <p className="font-medium mb-4 text-center md:text-left">TPE/PME, comptez sur nous pour vous aider à :</p>
-            <ul className="space-y-2 text-gray-600 pl-4 md:pl-0">
-              <li>• Refinancer son entreprise</li>
-              <li>• Ouvrir une nouvelle agence</li>
-              <li>• Faire connaître son entreprise</li>
-              <li>• Se lancer à l&apos;international</li>
-              <li>• Digitaliser son entreprise</li>
-              <li>• Acquérir une entreprise</li>
-              <li>• Transformer son entreprise</li>
-              <li>• Financer des projets de développements durables</li>
+            <p className="font-medium text-gray-800 mb-6 text-center md:text-left">TPE/PME, comptez sur nous pour vous aider à :</p>
+            <ul className="space-y-2 text-gray-400 md:pl-0">
+              <li className="flex items-center">
+                <span className="text-sm">•</span>
+                <span className="ml-2">Refinancer son entreprise</span>
+              </li>
+              <li className="flex items-center">
+                <span className="text-sm">•</span>
+                <span className="ml-2">Ouvrir une nouvelle agence</span>
+              </li>
+              <li className="flex items-center">
+                <span className="text-sm">•</span>
+                <span className="ml-2">Faire connaître son entreprise</span>
+              </li>
+              <li className="flex items-center">
+                <span className="text-sm">•</span>
+                <span className="ml-2">Se lancer à l&apos;international</span>
+              </li>
+              <li className="flex items-center">
+                <span className="text-sm">•</span>
+                <span className="ml-2">Digitaliser son entreprise</span>
+              </li>
+              <li className="flex items-center">
+                <span className="text-sm">•</span>
+                <span className="ml-2">Acquérir une entreprise</span>
+              </li>
+              <li className="flex items-center">
+                <span className="text-sm">•</span>
+                <span className="ml-2">Transformer son entreprise</span>
+              </li>
+              <li className="flex items-center">
+                <span className="text-sm">•</span>
+                <span className="ml-2">Financer des projets de développements durables</span>
+              </li>
             </ul>
-            <div className="text-center md:text-left">
-              <button className="mt-8 bg-gray-900 text-white px-6 py-3 rounded-lg w-full md:w-auto">
+            <div className="mt-12 md:text-left">
+              <button className="bg-gray-900 text-white px-8 py-3 rounded-lg hover:bg-gray-800 transition-colors">
                 Vidéo de présentation
               </button>
             </div>

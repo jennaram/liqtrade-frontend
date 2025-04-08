@@ -24,12 +24,12 @@ export default function Home() {
           </div>
           <div className="flex flex-col md:flex-row items-center gap-4 w-full md:w-auto md:ml-8">
             <button 
-              className="bg-white text-[#22C55E] hover:bg-gray-50 text-base font-medium px-6 md:px-10 py-3 md:py-5 rounded-md transition-all duration-200 w-full md:min-w-[160px] border border-[#22C55E]"
+              className="bg-white text-[#22C55E] hover:bg-gray-50 text-sm font-medium px-6 py-2.5 rounded-md transition-all duration-200 w-full md:w-[120px] border border-[#22C55E] whitespace-nowrap flex items-center justify-center"
             >
               S&apos;inscrire
             </button>
             <button 
-              className="bg-[#22C55E] text-white hover:bg-[#16A34A] text-base font-medium px-6 md:px-10 py-3 md:py-5 rounded-md transition-all duration-200 w-full md:min-w-[160px]"
+              className="bg-[#22C55E] text-white hover:bg-[#16A34A] text-sm font-medium px-6 py-2.5 rounded-md transition-all duration-200 w-full md:w-[120px] whitespace-nowrap flex items-center justify-center"
             >
               Se connecter
             </button>
@@ -50,10 +50,10 @@ export default function Home() {
             sans garantie personnelle
           </p>
           <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
-            <Link href="/connexion" className="bg-emerald-500 text-white px-6 py-3 rounded-lg hover:bg-emerald-600 text-center">
+            <Link href="/connexion" className="bg-[#22C55E] text-white px-6 py-3 rounded-lg hover:bg-[#16A34A] text-center">
               Se connecter
             </Link>
-            <Link href="/inscription" className="text-emerald-500 hover:text-emerald-600 flex items-center justify-center md:justify-start">
+            <Link href="/inscription" className="text-[#22C55E] hover:text-[#16A34A] flex items-center justify-center md:justify-start">
               S&apos;inscrire <span className="ml-2">→</span>
             </Link>
           </div>

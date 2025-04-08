@@ -9,7 +9,7 @@ export default function Home() {
         {/* Logo et éléments de gauche */}
         <div className="flex flex-col md:flex-row items-center w-full md:w-auto mb-4 md:mb-0">
           <Image src="/images/logoliqtrade.png" alt="Liqtrade" width={120} height={30} className="object-contain mb-4 md:mb-0" />
-          <div className="flex flex-col md:flex-row md:ml-8 space-y-4 md:space-y-0">
+          <div className="flex flex-col md:flex-row md:ml-16 space-y-4 md:space-y-0">
             <span className="text-gray-800 text-base font-medium cursor-pointer hover:text-gray-600 md:mr-8 text-center">Prêt</span>
             <span className="text-gray-800 text-base font-medium cursor-pointer hover:text-gray-600 text-center">Affacturage</span>
           </div>

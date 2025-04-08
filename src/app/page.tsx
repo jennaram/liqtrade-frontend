@@ -137,42 +137,44 @@ export default function Home() {
       </section>
 
       {/* Features Grid */}
-      <section className="px-4 md:px-12 py-8 md:py-16 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-        <div className="p-6 md:p-8 bg-gray-50 rounded-xl">
-          <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mb-6 mx-auto md:mx-0">
-            <span className="text-emerald-500">✓</span>
+      <section className="px-4 md:px-12 py-8 md:py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 md:max-w-[1200px] mx-auto">
+          <div className="p-6 md:p-8 bg-white rounded-xl shadow-md">
+            <div className="w-12 h-12 bg-[#DCFCE7] rounded-full flex items-center justify-center mb-6 mx-auto md:mx-0">
+              <span className="text-[#22C55E]">✓</span>
+            </div>
+            <h3 className="text-xl font-semibold mb-4 text-center md:text-left">Evaluation du profil de risque de votre client</h3>
+            <p className="text-gray-600 text-center md:text-left">
+              Plus de mauvaises surprises lors de la facturation de votre client. Chez Liqtrade, nous évaluons son risque débiteur afin de permettre la valorisation et l&apos;acceptation rapide de votre facture.
+            </p>
           </div>
-          <h3 className="text-xl font-semibold mb-4 text-center md:text-left">Evaluation du profil de risque de votre client</h3>
-          <p className="text-gray-600 text-center md:text-left">
-            Plus de mauvaises surprises lors de la facturation de votre client. Chez Liqtrade, nous évaluons son risque débiteur afin de permettre la valorisation et l&apos;acceptation rapide de votre facture.
-          </p>
-        </div>
-        <div className="p-6 md:p-8 bg-gray-50 rounded-xl">
-          <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto md:mx-0">
-            <span className="text-blue-500">€</span>
+          <div className="p-6 md:p-8 bg-white rounded-xl shadow-md">
+            <div className="w-12 h-12 bg-[#DCFCE7] rounded-full flex items-center justify-center mb-6 mx-auto md:mx-0">
+              <span className="text-[#22C55E]">€</span>
+            </div>
+            <h3 className="text-xl font-semibold mb-4 text-center md:text-left">Meilleur prix de cession de votre créance</h3>
+            <p className="text-gray-600 text-center md:text-left">
+              Nos algorithmes trouvent pour vous la meilleure offre de financement en termes de prix et de taux de commission. En moyenne, nos clients perçoivent jusqu&apos;à 97 % de la valeur nominale de leur facture.
+            </p>
           </div>
-          <h3 className="text-xl font-semibold mb-4 text-center md:text-left">Meilleur prix de cession de votre créance</h3>
-          <p className="text-gray-600 text-center md:text-left">
-            Nos algorithmes trouvent pour vous la meilleure offre de financement en termes de prix et de taux de commission. En moyenne, nos clients perçoivent jusqu&apos;à 97 % de la valeur nominale de leur facture.
-          </p>
-        </div>
-        <div className="p-6 md:p-8 bg-gray-50 rounded-xl">
-          <div className="w-12 h-12 bg-cyan-100 rounded-full flex items-center justify-center mb-6 mx-auto md:mx-0">
-            <span className="text-cyan-500">⌚</span>
+          <div className="p-6 md:p-8 bg-white rounded-xl shadow-md">
+            <div className="w-12 h-12 bg-[#DCFCE7] rounded-full flex items-center justify-center mb-6 mx-auto md:mx-0">
+              <span className="text-[#22C55E]">⌚</span>
+            </div>
+            <h3 className="text-xl font-semibold mb-4 text-center md:text-left">Paiement en un temps record pour vos factures</h3>
+            <p className="text-gray-600 text-center md:text-left">
+              Après validation et financement de votre facture, votre paiement est transféré en seulement quelques minutes. Grâce à notre plateforme de paiement, bénéficiez de nouvelles fonctionnalités de paiement instantané.
+            </p>
           </div>
-          <h3 className="text-xl font-semibold mb-4 text-center md:text-left">Paiement en un temps record pour vos factures</h3>
-          <p className="text-gray-600 text-center md:text-left">
-            Après validation et financement de votre facture, votre paiement est transféré en seulement quelques minutes. Grâce à notre plateforme de paiement, bénéficiez de nouvelles fonctionnalités de paiement instantané.
-          </p>
-        </div>
-        <div className="p-6 md:p-8 bg-gray-50 rounded-xl">
-          <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mb-6 mx-auto md:mx-0">
-            <span className="text-amber-500">?</span>
+          <div className="p-6 md:p-8 bg-white rounded-xl shadow-md">
+            <div className="w-12 h-12 bg-[#DCFCE7] rounded-full flex items-center justify-center mb-6 mx-auto md:mx-0">
+              <span className="text-[#22C55E]">?</span>
+            </div>
+            <h3 className="text-xl font-semibold mb-4 text-center md:text-left">Financez vos besoins de trésorerie en temps réel</h3>
+            <p className="text-gray-600 text-center md:text-left">
+              Faites une demande de financement en ligne via l&apos;envoi électronique de facture et obtenez plus rapidement vos fonds via un traitement automatisé de vos demandes.
+            </p>
           </div>
-          <h3 className="text-xl font-semibold mb-4 text-center md:text-left">Financez vos besoins de trésorerie en temps réel</h3>
-          <p className="text-gray-600 text-center md:text-left">
-            Faites une demande de financement en ligne via l&apos;envoi électronique de facture et obtenez plus rapidement vos fonds via un traitement automatisé de vos demandes.
-          </p>
         </div>
       </section>
     </main>

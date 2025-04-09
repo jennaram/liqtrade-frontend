@@ -1,8 +1,6 @@
 import { PencilIcon } from '@heroicons/react/24/solid';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, ResponsiveContainer, ReferenceLine, Label, Tooltip } from 'recharts';
 import Image from 'next/image';
-import React, { useState } from 'react';
-import Link from 'next/link';
 
 const data = [
   { name: '1', value1: 10, value2: 2, value3: 2 },
@@ -34,12 +32,6 @@ const CustomTooltip = ({ active, payload }: TooltipProps) => {
 };
 
 const DashboardMain = () => {
-  const [isPopupOpen, setIsPopupOpen] = useState(false);
-
-  const togglePopup = () => {
-    setIsPopupOpen(!isPopupOpen);
-  };
-
   return (
     <main className="flex-1 bg-gray-50">
       <div className="max-w-7xl mx-auto px-8 pt-12">
@@ -270,44 +262,44 @@ const DashboardMain = () => {
                   </thead>
                   <tbody>
                     <tr>
-                      <td className="border-b py-2 text-gray-400">7 DAYS</td>
-                      <td className="border-b py-2 text-center text-gray-400">0.0000</td>
-                      <td className="border-b py-2 text-center text-gray-400">0</td>
-                      <td className="border-b py-2 text-center text-gray-400">0.0000</td>
-                      <td className="border-b py-2 text-center text-gray-400">0.0000</td>
-                      <td className="border-b py-2 text-center text-gray-400">1</td>
+                      <td className="border-b py-2">7 DAYS</td>
+                      <td className="border-b py-2 text-center">0.0000</td>
+                      <td className="border-b py-2 text-center">0</td>
+                      <td className="border-b py-2 text-center">0.0000</td>
+                      <td className="border-b py-2 text-center">0.0000</td>
+                      <td className="border-b py-2 text-center">1</td>
                     </tr>
                     <tr>
-                      <td className="border-b py-2 text-gray-400">30 DAYS</td>
-                      <td className="border-b py-2 text-center text-gray-400">0.0000</td>
-                      <td className="border-b py-2 text-center text-gray-400">0</td>
-                      <td className="border-b py-2 text-center text-gray-400">0.0000</td>
-                      <td className="border-b py-2 text-center text-gray-400">0.0000</td>
-                      <td className="border-b py-2 text-center text-gray-400">9</td>
+                      <td className="border-b py-2">30 DAYS</td>
+                      <td className="border-b py-2 text-center">0.0000</td>
+                      <td className="border-b py-2 text-center">0</td>
+                      <td className="border-b py-2 text-center">0.0000</td>
+                      <td className="border-b py-2 text-center">0.0000</td>
+                      <td className="border-b py-2 text-center">9</td>
                     </tr>
                     <tr>
-                      <td className="border-b py-2 text-gray-400">90 DAYS</td>
-                      <td className="border-b py-2 text-center text-gray-400">0.0300</td>
-                      <td className="border-b py-2 text-center text-gray-400">0.02345</td>
-                      <td className="border-b py-2 text-center text-gray-400">0.0300</td>
-                      <td className="border-b py-2 text-center text-gray-400">0.0300</td>
-                      <td className="border-b py-2 text-center text-gray-400">0.02345</td>
+                      <td className="border-b py-2">90 DAYS</td>
+                      <td className="border-b py-2 text-center">0.0300</td>
+                      <td className="border-b py-2 text-center">0.02345</td>
+                      <td className="border-b py-2 text-center">0.0300</td>
+                      <td className="border-b py-2 text-center">0.0300</td>
+                      <td className="border-b py-2 text-center">0.02345</td>
                     </tr>
                     <tr>
-                      <td className="border-b py-2 text-gray-400">180 DAYS</td>
-                      <td className="border-b py-2 text-center text-gray-400">0.03500</td>
-                      <td className="border-b py-2 text-center text-gray-400">0.03500</td>
-                      <td className="border-b py-2 text-center text-gray-400">0.03500</td>
-                      <td className="border-b py-2 text-center text-gray-400">0.03500</td>
-                      <td className="border-b py-2 text-center text-gray-400">0.03500</td>
+                      <td className="border-b py-2">180 DAYS</td>
+                      <td className="border-b py-2 text-center">0.03500</td>
+                      <td className="border-b py-2 text-center">0.03500</td>
+                      <td className="border-b py-2 text-center">0.03500</td>
+                      <td className="border-b py-2 text-center">0.03500</td>
+                      <td className="border-b py-2 text-center">0.03500</td>
                     </tr>
                     <tr>
-                      <td className="py-2 text-gray-400">360 DAYS</td>
-                      <td className="py-2 text-center text-gray-400">0.004400</td>
-                      <td className="py-2 text-center text-gray-400">0.004400</td>
-                      <td className="py-2 text-center text-gray-400">0.004400</td>
-                      <td className="py-2 text-center text-gray-400">0.004400</td>
-                      <td className="py-2 text-center text-gray-400">0.004400</td>
+                      <td className="py-2">360 DAYS</td>
+                      <td className="py-2 text-center">0.004400</td>
+                      <td className="py-2 text-center">0.004400</td>
+                      <td className="py-2 text-center">0.004400</td>
+                      <td className="py-2 text-center">0.004400</td>
+                      <td className="py-2 text-center">0.004400</td>
                     </tr>
                   </tbody>
                 </table>
@@ -442,7 +434,7 @@ const DashboardMain = () => {
                   alt="Trophy"
                   width={96}
                   height={96}
-                  className="mb-0 mt-0"
+                  className="mb-1"
                   priority
                 />
                 <h3 className="text-lg font-medium text-gray-900 text-left">Prêt Société</h3>

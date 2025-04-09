@@ -34,7 +34,7 @@ const DashboardMain = () => {
       <div className="max-w-7xl mx-auto px-8 pt-12">
         <AccountSection userData={mockUserData} />
         <FinancialSection loanData={mockLoanData} />
-        <TransactionTablesSection loanData={mockLoanData} />
+        <TransactionTablesSection />
         <Footer />
       </div>
     </main>

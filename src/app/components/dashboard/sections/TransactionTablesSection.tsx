@@ -1,11 +1,6 @@
 import { FC } from 'react';
-import { LoanData } from '@/app/types/dashboard';
 
-interface TransactionTablesSectionProps {
-  loanData: LoanData[];
-}
-
-export const TransactionTablesSection: FC<TransactionTablesSectionProps> = ({ loanData }) => {
+export const TransactionTablesSection: FC = () => {
   return (
     <div className="mb-12">
       <div className="bg-white rounded-xl p-6">

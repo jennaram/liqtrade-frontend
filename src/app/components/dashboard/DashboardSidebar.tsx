@@ -3,23 +3,23 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import {
-  HomeIcon,
-  ArrowPathRoundedSquareIcon,
-  UsersIcon,
-  QuestionMarkCircleIcon,
-  BellAlertIcon,
-  Cog8ToothIcon
+  UserCircleIcon,
+  ArrowsRightLeftIcon,
+  UserGroupIcon,
+  LifebuoyIcon,
+  BellIcon,
+  Cog6ToothIcon
 } from '@heroicons/react/24/outline';
 
 const DashboardSidebar = () => {
   const menuItems = [
-    { icon: HomeIcon, label: 'Tableau de Bord', active: true },
-    { icon: ArrowPathRoundedSquareIcon, label: 'Mes transactions' },
-    { icon: UsersIcon, label: 'Mes clients' },
-    { icon: QuestionMarkCircleIcon, label: 'Assistance' },
+    { icon: UserCircleIcon, label: 'Tableau de Bord', active: true },
+    { icon: ArrowsRightLeftIcon, label: 'Mes transactions' },
+    { icon: UserGroupIcon, label: 'Mes clients' },
+    { icon: LifebuoyIcon, label: 'Assistance' },
     { type: 'spacer' },
-    { icon: BellAlertIcon, label: 'Mes notifications', badge: '1' },
-    { icon: Cog8ToothIcon, label: 'Réglages' },
+    { icon: BellIcon, label: 'Mes notifications', badge: '1' },
+    { icon: Cog6ToothIcon, label: 'Réglages' },
   ];
 
   return (
@@ -73,12 +73,18 @@ const DashboardSidebar = () => {
       {/* User Profile */}
       <div className="absolute bottom-0 p-4 border-t w-64 bg-white">
         <div className="flex items-center space-x-3">
-          <div className="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center">
-            <span className="text-indigo-600 font-medium">PD</span>
+          <div className="w-10 h-10 rounded-full overflow-hidden">
+            <Image
+              src="/images/profile-photo.jpg"
+              alt="Photo de profil"
+              width={40}
+              height={40}
+              className="object-cover w-full h-full"
+            />
           </div>
           <div>
             <p className="text-sm font-medium text-gray-900">Paul Dumartin</p>
-            <p className="text-xs text-gray-500">Statut Vérification KYC : Validé</p>
+            <p className="text-xs text-gray-500">Statut Vérification KYC : <span className="text-[#22C55E]">Validé</span></p>
           </div>
         </div>
       </div>

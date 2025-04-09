@@ -340,16 +340,22 @@ const DashboardMain = () => {
                     </svg>
                   </span>
                 </div>
+                <div className="h-4 bg-gray-200 rounded-full">
+                  <div className="h-4 bg-green-500 rounded-full w-full"></div>
+                </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-600">Prêt HotDoggs</span>
-                  <span className="text-blue-600 flex items-center">
+                  <span className="text-blue-900 flex items-center">
                     En attente
                     <svg className="w-5 h-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM10 8a1 1 0 011 1v3h2a1 1 0 110 2h-3a1 1 0 01-1-1V9a1 1 0 011-1z" clipRule="evenodd" transform="translate(0, 0.5)" />
                     </svg>
                   </span>
                 </div>
-                <div className="pt-4">
+                <div className="h-4 bg-gray-200 rounded-full">
+                  <div className="h-4 bg-blue-900 rounded-full w-1/2"></div>
+                </div>
+                <div className="pt-4 text-center">
                   <button className="text-gray-600 hover:text-gray-900 text-sm font-medium underline">
                     Créer un nouveau dossier
                   </button>
@@ -358,10 +364,10 @@ const DashboardMain = () => {
             </div>
 
             {/* Prêt Société */}
-            <div className="bg-white rounded-xl p-6">
-              <h3 className="text-lg font-medium text-gray-900 mb-4">Prêt Société</h3>
-              <div className="flex flex-col h-full">
-                <div className="text-4xl font-bold text-gray-900 mb-2">39 234€</div>
+            <div className="bg-white rounded-xl p-6 flex flex-col">
+              <h3 className="text-lg font-medium text-gray-900 mb-4 text-left">Prêt Société</h3>
+              <div className="flex flex-col items-center">
+                <div className="text-5xl font-bold text-gray-900 mb-2">39 234€</div>
                 <div className="text-sm text-gray-500 mb-4">Montant du prêt en cours</div>
                 <div className="flex items-center text-green-500 mt-auto">
                   <svg className="w-5 h-5 mr-2" viewBox="0 0 20 20" fill="currentColor">

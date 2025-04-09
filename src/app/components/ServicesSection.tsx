@@ -59,9 +59,14 @@ const ServicesSection = () => {
             </li>
           </ul>
           <div className="mt-12 md:text-left">
-            <button className="bg-gray-900 text-white px-8 py-3 rounded-lg hover:bg-gray-800 transition-colors">
+            <Link 
+              href="https://youtu.be/erHB2HMXhR4?si=3cekOJJVTEH_Bk9F"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gray-900 text-white px-8 py-3 rounded-lg hover:bg-gray-800 transition-colors inline-block"
+            >
               Vidéo de présentation
-            </button>
+            </Link>
           </div>
         </div>
       </div>

@@ -121,9 +121,9 @@ const DashboardMain = () => {
         {/* Section Informations financières */}
         <div className="mb-12">
           <h2 className="text-2xl font-medium text-gray-900 mb-6">Informations financières</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
             {/* Graphique */}
-            <div className="bg-white rounded-xl p-6 h-[300px] flex flex-col">
+            <div className="md:col-span-2 bg-white rounded-xl p-6 h-[300px] flex flex-col">
               <div className="flex-1 flex flex-col">
                 <div className="flex-1">
                   <ResponsiveContainer width="100%" height="100%">
@@ -215,73 +215,93 @@ const DashboardMain = () => {
             </div>
 
             {/* Tableau */}
-            <div className="bg-white rounded-xl p-6 h-[300px] flex flex-col">
-              <div className="flex mb-2 space-x-2">
-                <button className="px-3 py-1.5 bg-indigo-100 text-indigo-900 rounded-lg text-sm">
+            <div className="md:col-span-3 bg-white rounded-xl p-6 h-[300px] flex flex-col">
+              <div className="grid grid-cols-4 mb-2">
+                <button className="bg-gray-100 text-gray-900 rounded-l-lg text-sm font-medium py-2 border-r border-white">
                   Euribor1w
                 </button>
-                <button className="px-3 py-1.5 text-gray-500 text-sm">
+                <button className="bg-gray-100 text-gray-500 text-sm font-medium py-2 border-r border-white">
                   Euribor2w
                 </button>
-                <button className="px-3 py-1.5 text-gray-500 text-sm">
+                <button className="bg-gray-100 text-gray-500 text-sm font-medium py-2 border-r border-white">
                   Euribor3w
                 </button>
-                <button className="px-3 py-1.5 text-gray-500 text-sm">
+                <button className="bg-gray-100 text-gray-500 rounded-r-lg text-sm font-medium py-2">
                   Average Sector Spread
                 </button>
               </div>
               <div className="overflow-x-auto flex-1">
                 <table className="w-full h-full text-xs">
+                  <colgroup>
+                    <col className="w-[15%]" />
+                    <col className="w-[17%]" />
+                    <col className="w-[17%]" />
+                    <col className="w-[17%]" />
+                    <col className="w-[17%]" />
+                    <col className="w-[17%]" />
+                  </colgroup>
                   <thead>
-                    <tr>
-                      <th className="text-left px-2 py-1 text-gray-700 font-medium">Tenor</th>
-                      <th className="text-left px-2 py-1 text-gray-700 font-medium">Market Place</th>
-                      <th className="text-left px-2 py-1 text-gray-700 font-medium">Market Risk Free<br/>Date</th>
-                      <th className="text-left px-2 py-1 text-gray-700 font-medium">Market Risk Free<br/>Premium</th>
-                      <th className="text-left px-2 py-1 text-gray-700 font-medium">Change %</th>
-                      <th className="text-left px-2 py-1 text-gray-700 font-medium">Variation</th>
+                    <tr className="border-b">
+                      <th className="text-left py-1 font-medium text-blue-800">
+                        Tenor
+                      </th>
+                      <th className="text-left py-1 font-medium text-blue-800">
+                        Market Place
+                      </th>
+                      <th className="text-left py-1 font-medium text-blue-800">
+                        Market Risk Free<br/>Date
+                      </th>
+                      <th className="text-left py-1 font-medium text-blue-800">
+                        Market Risk Free<br/>Premium
+                      </th>
+                      <th className="text-left py-1 font-medium text-blue-800">
+                        Change %
+                      </th>
+                      <th className="text-left py-1 font-medium text-blue-800">
+                        Variation
+                      </th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td className="border-b px-2 py-1.5 text-gray-600">7 DAYS</td>
-                      <td className="border-b px-2 py-1.5 text-gray-600">0.0000</td>
-                      <td className="border-b px-2 py-1.5 text-gray-600">0</td>
-                      <td className="border-b px-2 py-1.5 text-gray-600">0.0000</td>
-                      <td className="border-b px-2 py-1.5 text-gray-600">0.0000</td>
-                      <td className="border-b px-2 py-1.5 text-gray-600">1</td>
+                      <td className="border-b py-2">7 DAYS</td>
+                      <td className="border-b py-2">0.0000</td>
+                      <td className="border-b py-2">0</td>
+                      <td className="border-b py-2">0.0000</td>
+                      <td className="border-b py-2">0.0000</td>
+                      <td className="border-b py-2">1</td>
                     </tr>
                     <tr>
-                      <td className="border-b px-2 py-1.5 text-gray-600">30 DAYS</td>
-                      <td className="border-b px-2 py-1.5 text-gray-600">0.0000</td>
-                      <td className="border-b px-2 py-1.5 text-gray-600">0</td>
-                      <td className="border-b px-2 py-1.5 text-gray-600">0.0000</td>
-                      <td className="border-b px-2 py-1.5 text-gray-600">0.0000</td>
-                      <td className="border-b px-2 py-1.5 text-gray-600">9</td>
+                      <td className="border-b py-2">30 DAYS</td>
+                      <td className="border-b py-2">0.0000</td>
+                      <td className="border-b py-2">0</td>
+                      <td className="border-b py-2">0.0000</td>
+                      <td className="border-b py-2">0.0000</td>
+                      <td className="border-b py-2">9</td>
                     </tr>
                     <tr>
-                      <td className="border-b px-2 py-1.5 text-gray-600">90 DAYS</td>
-                      <td className="border-b px-2 py-1.5 text-gray-600">0.0300</td>
-                      <td className="border-b px-2 py-1.5 text-gray-600">0.02345</td>
-                      <td className="border-b px-2 py-1.5 text-gray-600">0.0300</td>
-                      <td className="border-b px-2 py-1.5 text-gray-600">0.0300</td>
-                      <td className="border-b px-2 py-1.5 text-gray-600">0.02345</td>
+                      <td className="border-b py-2">90 DAYS</td>
+                      <td className="border-b py-2">0.0300</td>
+                      <td className="border-b py-2">0.02345</td>
+                      <td className="border-b py-2">0.0300</td>
+                      <td className="border-b py-2">0.0300</td>
+                      <td className="border-b py-2">0.02345</td>
                     </tr>
                     <tr>
-                      <td className="border-b px-2 py-1.5 text-gray-600">180 DAYS</td>
-                      <td className="border-b px-2 py-1.5 text-gray-600">0.03500</td>
-                      <td className="border-b px-2 py-1.5 text-gray-600">0.03500</td>
-                      <td className="border-b px-2 py-1.5 text-gray-600">0.03500</td>
-                      <td className="border-b px-2 py-1.5 text-gray-600">0.03500</td>
-                      <td className="border-b px-2 py-1.5 text-gray-600">0.03500</td>
+                      <td className="border-b py-2">180 DAYS</td>
+                      <td className="border-b py-2">0.03500</td>
+                      <td className="border-b py-2">0.03500</td>
+                      <td className="border-b py-2">0.03500</td>
+                      <td className="border-b py-2">0.03500</td>
+                      <td className="border-b py-2">0.03500</td>
                     </tr>
                     <tr>
-                      <td className="px-2 py-1.5 text-gray-600">360 DAYS</td>
-                      <td className="px-2 py-1.5 text-gray-600">0.004400</td>
-                      <td className="px-2 py-1.5 text-gray-600">0.004400</td>
-                      <td className="px-2 py-1.5 text-gray-600">0.004400</td>
-                      <td className="px-2 py-1.5 text-gray-600">0.004400</td>
-                      <td className="px-2 py-1.5 text-gray-600">0.004400</td>
+                      <td className="py-2">360 DAYS</td>
+                      <td className="py-2">0.004400</td>
+                      <td className="py-2">0.004400</td>
+                      <td className="py-2">0.004400</td>
+                      <td className="py-2">0.004400</td>
+                      <td className="py-2">0.004400</td>
                     </tr>
                   </tbody>
                 </table>

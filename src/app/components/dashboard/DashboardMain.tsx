@@ -1,5 +1,6 @@
 import { PencilIcon } from '@heroicons/react/24/solid';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ReferenceLine, Label } from 'recharts';
+import Image from 'next/image';
 
 const data = [
   { name: '1', value1: 0, value2: 0, value3: 0 },
@@ -40,39 +41,39 @@ const DashboardMain = () => {
         {/* Section Mon compte */}
         <div className="mb-12">
           <h2 className="text-2xl font-medium text-gray-900 mb-6">Mon compte</h2>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
             {/* Carte d'identité */}
-            <div className="bg-white rounded-xl p-6">
-              <div className="flex justify-between items-start mb-4">
-                <div>
-                  <h3 className="text-lg font-medium text-gray-900">Paul Dumartin</h3>
-                  <p className="text-sm text-gray-500">14 rue du Louvre</p>
-                  <p className="text-sm text-gray-500">PARIS 75001</p>
-                </div>
-                <button className="p-2 rounded-lg bg-gray-100 hover:bg-gray-200">
-                  <PencilIcon className="w-4 h-4 text-gray-600" />
+            <div className="bg-white rounded-xl p-6 flex flex-col h-full">
+              <div className="flex justify-end">
+                <button className="p-2 rounded-lg bg-black hover:bg-gray-900">
+                  <PencilIcon className="w-4 h-4 text-white" />
                 </button>
               </div>
-              <div className="text-sm text-gray-500">
-                <p>Segment</p>
+              <div className="mt-auto">
+                <h3 className="text-lg font-medium text-gray-900">Paul Dumartin</h3>
+                <p className="text-sm text-gray-500">14 rue du Louvre</p>
+                <p className="text-sm text-gray-500">PARIS 75001</p>
               </div>
             </div>
 
             {/* Segment */}
-            <div className="bg-white rounded-xl p-6">
-              <div className="flex flex-col justify-center items-center h-full">
+            <div className="bg-white rounded-xl p-6 flex flex-col">
+              <div>
+                <p className="text-sm text-gray-500">Segment</p>
+              </div>
+              <div className="flex justify-end mt-auto">
                 <span className="text-4xl font-bold text-blue-900">RET</span>
               </div>
             </div>
 
             {/* Évaluation des risques */}
-            <div className="bg-white rounded-xl p-6">
-              <div className="mb-2">
+            <div className="bg-white rounded-xl p-6 flex flex-col">
+              <div>
                 <p className="text-sm text-gray-500">Évaluation des risques</p>
                 <p className="text-sm text-green-500">Risques faible</p>
               </div>
-              <div className="flex items-center justify-center">
-                <span className="text-6xl font-bold text-green-500">B</span>
+              <div className="flex justify-end mt-auto">
+                <span className="text-5xl font-bold text-green-500">B</span>
               </div>
             </div>
 
@@ -92,9 +93,25 @@ const DashboardMain = () => {
                 </div>
               </div>
               <div className="mt-4 flex justify-end">
-                <div className="flex items-center">
-                  <span className="text-3xl font-bold text-blue-900">80K</span>
-                  <img src="/images/coins.png" alt="Coins" className="w-8 h-8 ml-2" />
+                
+              </div>
+            </div>
+
+            {/* Montant dernière transaction */}
+            <div className="bg-white rounded-xl p-6">
+              <div className="mb-2">
+                <p className="text-sm text-gray-500">Montant dernière transaction</p>
+              </div>
+              <div className="flex justify-between items-end mt-4">
+                <span className="text-4xl font-bold text-indigo-900">80K</span>
+                <div className="relative w-12 h-12">
+                  <Image
+                    src="/images/piece.png"
+                    alt="Euro"
+                    fill
+                    sizes="48px"
+                    style={{ objectFit: 'contain' }}
+                  />
                 </div>
               </div>
             </div>

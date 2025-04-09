@@ -1,13 +1,13 @@
 import { PencilIcon } from '@heroicons/react/24/solid';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ReferenceLine, Label } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, ResponsiveContainer, ReferenceLine, Label } from 'recharts';
 import Image from 'next/image';
 
 const data = [
-  { name: '1', value1: 0, value2: 0, value3: 0 },
-  { name: '5', value1: 20, value2: 10, value3: 5 },
+  { name: '1', value1: 10, value2: 2, value3: 2 },
+  { name: '5', value1: 22, value2: 8, value3: 5 },
   { name: '10', value1: 15, value2: 15, value3: 8 },
-  { name: '15', value1: 25, value2: 20, value3: 10 },
-  { name: '20', value1: 30, value2: 25, value3: 20 },
+  { name: '15', value1: 30, value2: 20, value3: 10 },
+  { name: '20', value1: 42, value2: 25, value3: 20 },
   { name: '25', value1: 50, value2: 35, value3: 30 },
 ];
 
@@ -129,16 +129,8 @@ const DashboardMain = () => {
                   <LineChart data={data} margin={{ top: 20, right: 30, left: 20, bottom: 20 }}>
                     <defs>
                       <linearGradient id="colorValue1" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="5%" stopColor="#4ADE80" stopOpacity={0.1}/>
-                        <stop offset="95%" stopColor="#4ADE80" stopOpacity={0.01}/>
-                      </linearGradient>
-                      <linearGradient id="colorValue2" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="5%" stopColor="#60A5FA" stopOpacity={0.1}/>
-                        <stop offset="95%" stopColor="#60A5FA" stopOpacity={0.01}/>
-                      </linearGradient>
-                      <linearGradient id="colorValue3" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="5%" stopColor="#F97316" stopOpacity={0.1}/>
-                        <stop offset="95%" stopColor="#F97316" stopOpacity={0.01}/>
+                        <stop offset="5%" stopColor="#4ADE80" stopOpacity={0.2}/>
+                        <stop offset="95%" stopColor="#4ADE80" stopOpacity={0.05}/>
                       </linearGradient>
                     </defs>
                     <CartesianGrid strokeDasharray="3 3" stroke="#E5E7EB" />
@@ -157,45 +149,24 @@ const DashboardMain = () => {
                       tickFormatter={(value) => `${value}K`}
                       width={45}
                     />
-                    <Tooltip 
-                      content={<CustomTooltip />} 
-                      cursor={false}
-                      active={false}
-                    />
                     <ReferenceLine
-                      x="12.5"
-                      y={25}
+                      x="15"
+                      y={30}
                       stroke="#6B7280"
                       strokeDasharray="3 3"
                     >
                       <Label
-                        content={({ x, y }) => {
-                          const xPos = typeof x === 'number' ? x + 30 : (parseFloat(x as string) + 30);
-                          return (
-                            <g transform={`translate(${xPos},${y})`}>
-                              <rect
-                                x="-30"
-                                y="-12"
-                                width="60"
-                                height="24"
-                                rx="12"
-                                fill="white"
-                                stroke="#E5E7EB"
-                              />
-                              <text
-                                x="0"
-                                y="4"
-                                textAnchor="middle"
-                                fill="#374151"
-                                fontSize="12"
-                                fontFamily="sans-serif"
-                              >
-                                {`${randomAmount}K€`}
-                              </text>
-                            </g>
-                          );
-                        }}
-                      />
+                        value="2973€"
+                        position="top"
+                        offset={10}
+                        fill="white"
+                        fontSize={12}
+                      >
+                        <g>
+                          <rect width="50" height="24" x="-25" y="-12" fill="black" rx="4"/>
+                          <text x="0" y="4" textAnchor="middle" fill="white">2973€</text>
+                        </g>
+                      </Label>
                     </ReferenceLine>
                     <Line 
                       type="monotone" 
@@ -213,7 +184,6 @@ const DashboardMain = () => {
                       strokeWidth={2} 
                       dot={false}
                       activeDot={{ r: 4, fill: "#60A5FA" }}
-                      fill="url(#colorValue2)"
                     />
                     <Line 
                       type="monotone" 
@@ -222,7 +192,6 @@ const DashboardMain = () => {
                       strokeWidth={2} 
                       dot={false}
                       activeDot={{ r: 4, fill: "#F97316" }}
-                      fill="url(#colorValue3)"
                     />
                   </LineChart>
                 </ResponsiveContainer>

@@ -30,8 +30,8 @@ const DashboardSidebar = () => {
           <Image
             src="/images/logoliqtrade.png"
             alt="Liqtrade"
-            width={120}
-            height={30}
+            width={140}
+            height={35}
             className="object-contain"
           />
         </Link>

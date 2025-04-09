@@ -1,6 +1,7 @@
 import { PencilIcon } from '@heroicons/react/24/solid';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, ResponsiveContainer, ReferenceLine, Label, Tooltip } from 'recharts';
 import Image from 'next/image';
+import Footer from '../Footer';
 
 const data = [
   { name: '1', value1: 10, value2: 2, value3: 2 },
@@ -522,6 +523,7 @@ const DashboardMain = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </main>
   );
 };

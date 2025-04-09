@@ -123,137 +123,165 @@ const DashboardMain = () => {
           <h2 className="text-2xl font-medium text-gray-900 mb-6">Informations financières</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Graphique */}
-            <div className="bg-white rounded-xl p-6">
-              <div className="h-[300px]">
-                <ResponsiveContainer width="100%" height="100%">
-                  <LineChart data={data} margin={{ top: 20, right: 30, left: 20, bottom: 20 }}>
-                    <defs>
-                      <linearGradient id="colorValue1" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="5%" stopColor="#4ADE80" stopOpacity={0.2}/>
-                        <stop offset="95%" stopColor="#4ADE80" stopOpacity={0.05}/>
-                      </linearGradient>
-                    </defs>
-                    <CartesianGrid strokeDasharray="3 3" stroke="#E5E7EB" />
-                    <XAxis 
-                      dataKey="name" 
-                      axisLine={false}
-                      tickLine={false}
-                      tick={{ fill: '#6B7280', fontSize: 12 }}
-                    />
-                    <YAxis 
-                      axisLine={false}
-                      tickLine={false}
-                      tick={{ fill: '#6B7280', fontSize: 12 }}
-                      ticks={[0, 10, 20, 30, 40, 50]}
-                      domain={[0, 50]}
-                      tickFormatter={(value) => `${value}K`}
-                      width={45}
-                    />
-                    <ReferenceLine
-                      x="15"
-                      y={30}
-                      stroke="#6B7280"
-                      strokeDasharray="3 3"
-                    >
-                      <Label
-                        value="2973€"
-                        position="top"
-                        offset={10}
-                        fill="white"
-                        fontSize={12}
+            <div className="bg-white rounded-xl p-6 h-[300px] flex flex-col">
+              <div className="flex-1 flex flex-col">
+                <div className="flex-1">
+                  <ResponsiveContainer width="100%" height="100%">
+                    <LineChart data={data} margin={{ top: 20, right: 30, left: 20, bottom: 10 }}>
+                      <defs>
+                        <linearGradient id="colorValue1" x1="0" y1="0" x2="0" y2="1">
+                          <stop offset="5%" stopColor="#4ADE80" stopOpacity={0.2}/>
+                          <stop offset="95%" stopColor="#4ADE80" stopOpacity={0.05}/>
+                        </linearGradient>
+                      </defs>
+                      <CartesianGrid strokeDasharray="3 3" stroke="#E5E7EB" />
+                      <XAxis 
+                        dataKey="name" 
+                        axisLine={false}
+                        tickLine={false}
+                        tick={{ fill: '#6B7280', fontSize: 12 }}
+                      />
+                      <YAxis 
+                        axisLine={false}
+                        tickLine={false}
+                        tick={{ fill: '#6B7280', fontSize: 12 }}
+                        ticks={[0, 10, 20, 30, 40, 50]}
+                        domain={[0, 50]}
+                        tickFormatter={(value) => `${value}K`}
+                        width={45}
+                      />
+                      <ReferenceLine
+                        x="15"
+                        y={30}
+                        stroke="#6B7280"
+                        strokeDasharray="3 3"
                       >
-                        <g>
-                          <rect width="50" height="24" x="-25" y="-12" fill="black" rx="4"/>
-                          <text x="0" y="4" textAnchor="middle" fill="white">2973€</text>
-                        </g>
-                      </Label>
-                    </ReferenceLine>
-                    <Line 
-                      type="monotone" 
-                      dataKey="value1" 
-                      stroke="#4ADE80" 
-                      strokeWidth={2} 
-                      dot={false}
-                      activeDot={{ r: 4, fill: "#4ADE80" }}
-                      fill="url(#colorValue1)"
-                    />
-                    <Line 
-                      type="monotone" 
-                      dataKey="value2" 
-                      stroke="#60A5FA" 
-                      strokeWidth={2} 
-                      dot={false}
-                      activeDot={{ r: 4, fill: "#60A5FA" }}
-                    />
-                    <Line 
-                      type="monotone" 
-                      dataKey="value3" 
-                      stroke="#F97316" 
-                      strokeWidth={2} 
-                      dot={false}
-                      activeDot={{ r: 4, fill: "#F97316" }}
-                    />
-                  </LineChart>
-                </ResponsiveContainer>
-              </div>
-              <div className="flex justify-center mt-6 space-x-8">
-                <div className="flex items-center">
-                  <div className="w-3 h-3 rounded-full bg-green-400 mr-2"></div>
-                  <span className="text-sm text-gray-600">Lorem ipsum</span>
+                        <Label
+                          value="2973€"
+                          position="top"
+                          offset={10}
+                          fill="white"
+                          fontSize={12}
+                        >
+                          <g>
+                            <rect width="50" height="24" x="-25" y="-12" fill="black" rx="4"/>
+                            <text x="0" y="4" textAnchor="middle" fill="white">2973€</text>
+                          </g>
+                        </Label>
+                      </ReferenceLine>
+                      <Line 
+                        type="monotone" 
+                        dataKey="value1" 
+                        stroke="#4ADE80" 
+                        strokeWidth={2} 
+                        dot={false}
+                        activeDot={{ r: 4, fill: "#4ADE80" }}
+                        fill="url(#colorValue1)"
+                      />
+                      <Line 
+                        type="monotone" 
+                        dataKey="value2" 
+                        stroke="#60A5FA" 
+                        strokeWidth={2} 
+                        dot={false}
+                        activeDot={{ r: 4, fill: "#60A5FA" }}
+                      />
+                      <Line 
+                        type="monotone" 
+                        dataKey="value3" 
+                        stroke="#F97316" 
+                        strokeWidth={2} 
+                        dot={false}
+                        activeDot={{ r: 4, fill: "#F97316" }}
+                      />
+                    </LineChart>
+                  </ResponsiveContainer>
                 </div>
-                <div className="flex items-center">
-                  <div className="w-3 h-3 rounded-full bg-blue-400 mr-2"></div>
-                  <span className="text-sm text-gray-600">Lorem ipsum</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-3 h-3 rounded-full bg-orange-500 mr-2"></div>
-                  <span className="text-sm text-gray-600">Lorem ipsum</span>
+                <div className="flex justify-center mt-2 space-x-8">
+                  <div className="flex items-center">
+                    <div className="w-3 h-3 rounded-full bg-green-400 mr-2"></div>
+                    <span className="text-sm text-gray-600">Lorem ipsum</span>
+                  </div>
+                  <div className="flex items-center">
+                    <div className="w-3 h-3 rounded-full bg-blue-400 mr-2"></div>
+                    <span className="text-sm text-gray-600">Lorem ipsum</span>
+                  </div>
+                  <div className="flex items-center">
+                    <div className="w-3 h-3 rounded-full bg-orange-500 mr-2"></div>
+                    <span className="text-sm text-gray-600">Lorem ipsum</span>
+                  </div>
                 </div>
               </div>
             </div>
 
             {/* Tableau */}
-            <div className="bg-white rounded-xl p-6">
-              <div className="overflow-x-auto">
-                <table className="w-full">
+            <div className="bg-white rounded-xl p-6 h-[300px] flex flex-col">
+              <div className="flex mb-2 space-x-2">
+                <button className="px-3 py-1.5 bg-indigo-100 text-indigo-900 rounded-lg text-sm">
+                  Euribor1w
+                </button>
+                <button className="px-3 py-1.5 text-gray-500 text-sm">
+                  Euribor2w
+                </button>
+                <button className="px-3 py-1.5 text-gray-500 text-sm">
+                  Euribor3w
+                </button>
+                <button className="px-3 py-1.5 text-gray-500 text-sm">
+                  Average Sector Spread
+                </button>
+              </div>
+              <div className="overflow-x-auto flex-1">
+                <table className="w-full h-full text-xs">
                   <thead>
                     <tr>
-                      <th className="text-left px-4 py-2 bg-blue-50 text-blue-800 rounded-l-lg">Euribor1w</th>
-                      <th className="text-left px-4 py-2 text-gray-500">Euribor2w</th>
-                      <th className="text-left px-4 py-2 text-gray-500">Euribor3w</th>
-                      <th className="text-left px-4 py-2 text-gray-500 rounded-r-lg">Average Sector Spread</th>
+                      <th className="text-left px-2 py-1 text-gray-700 font-medium">Tenor</th>
+                      <th className="text-left px-2 py-1 text-gray-700 font-medium">Market Place</th>
+                      <th className="text-left px-2 py-1 text-gray-700 font-medium">Market Risk Free<br/>Date</th>
+                      <th className="text-left px-2 py-1 text-gray-700 font-medium">Market Risk Free<br/>Premium</th>
+                      <th className="text-left px-2 py-1 text-gray-700 font-medium">Change %</th>
+                      <th className="text-left px-2 py-1 text-gray-700 font-medium">Variation</th>
                     </tr>
                   </thead>
-                  <tbody className="text-sm">
+                  <tbody>
                     <tr>
-                      <td className="border-b px-4 py-3">7 DAYS</td>
-                      <td className="border-b px-4 py-3">0.0000</td>
-                      <td className="border-b px-4 py-3">0</td>
-                      <td className="border-b px-4 py-3">0.0000</td>
+                      <td className="border-b px-2 py-1.5 text-gray-600">7 DAYS</td>
+                      <td className="border-b px-2 py-1.5 text-gray-600">0.0000</td>
+                      <td className="border-b px-2 py-1.5 text-gray-600">0</td>
+                      <td className="border-b px-2 py-1.5 text-gray-600">0.0000</td>
+                      <td className="border-b px-2 py-1.5 text-gray-600">0.0000</td>
+                      <td className="border-b px-2 py-1.5 text-gray-600">1</td>
                     </tr>
                     <tr>
-                      <td className="border-b px-4 py-3">30 DAYS</td>
-                      <td className="border-b px-4 py-3">0.0000</td>
-                      <td className="border-b px-4 py-3">0</td>
-                      <td className="border-b px-4 py-3">0.0000</td>
+                      <td className="border-b px-2 py-1.5 text-gray-600">30 DAYS</td>
+                      <td className="border-b px-2 py-1.5 text-gray-600">0.0000</td>
+                      <td className="border-b px-2 py-1.5 text-gray-600">0</td>
+                      <td className="border-b px-2 py-1.5 text-gray-600">0.0000</td>
+                      <td className="border-b px-2 py-1.5 text-gray-600">0.0000</td>
+                      <td className="border-b px-2 py-1.5 text-gray-600">9</td>
                     </tr>
                     <tr>
-                      <td className="border-b px-4 py-3">90 DAYS</td>
-                      <td className="border-b px-4 py-3">0.0300</td>
-                      <td className="border-b px-4 py-3">0.02345</td>
-                      <td className="border-b px-4 py-3">0.0300</td>
+                      <td className="border-b px-2 py-1.5 text-gray-600">90 DAYS</td>
+                      <td className="border-b px-2 py-1.5 text-gray-600">0.0300</td>
+                      <td className="border-b px-2 py-1.5 text-gray-600">0.02345</td>
+                      <td className="border-b px-2 py-1.5 text-gray-600">0.0300</td>
+                      <td className="border-b px-2 py-1.5 text-gray-600">0.0300</td>
+                      <td className="border-b px-2 py-1.5 text-gray-600">0.02345</td>
                     </tr>
                     <tr>
-                      <td className="border-b px-4 py-3">180 DAYS</td>
-                      <td className="border-b px-4 py-3">0.03500</td>
-                      <td className="border-b px-4 py-3">0.03500</td>
-                      <td className="border-b px-4 py-3">0.03500</td>
+                      <td className="border-b px-2 py-1.5 text-gray-600">180 DAYS</td>
+                      <td className="border-b px-2 py-1.5 text-gray-600">0.03500</td>
+                      <td className="border-b px-2 py-1.5 text-gray-600">0.03500</td>
+                      <td className="border-b px-2 py-1.5 text-gray-600">0.03500</td>
+                      <td className="border-b px-2 py-1.5 text-gray-600">0.03500</td>
+                      <td className="border-b px-2 py-1.5 text-gray-600">0.03500</td>
                     </tr>
                     <tr>
-                      <td className="px-4 py-3">360 DAYS</td>
-                      <td className="px-4 py-3">0.004400</td>
-                      <td className="px-4 py-3">0.004400</td>
-                      <td className="px-4 py-3">0.004400</td>
+                      <td className="px-2 py-1.5 text-gray-600">360 DAYS</td>
+                      <td className="px-2 py-1.5 text-gray-600">0.004400</td>
+                      <td className="px-2 py-1.5 text-gray-600">0.004400</td>
+                      <td className="px-2 py-1.5 text-gray-600">0.004400</td>
+                      <td className="px-2 py-1.5 text-gray-600">0.004400</td>
+                      <td className="px-2 py-1.5 text-gray-600">0.004400</td>
                     </tr>
                   </tbody>
                 </table>

@@ -1,5 +1,5 @@
 import { PencilIcon } from '@heroicons/react/24/solid';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, ResponsiveContainer, ReferenceLine, Label } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, ResponsiveContainer, ReferenceLine, Label, Tooltip } from 'recharts';
 import Image from 'next/image';
 
 const data = [
@@ -32,9 +32,6 @@ const CustomTooltip = ({ active, payload }: TooltipProps) => {
 };
 
 const DashboardMain = () => {
-  // Générer un nombre aléatoire entre 1000 et 9999
-  const randomAmount = Math.floor(Math.random() * 9000 + 1000);
-  
   return (
     <main className="flex-1 bg-gray-50">
       <div className="max-w-7xl mx-auto px-8 pt-12">
@@ -150,6 +147,7 @@ const DashboardMain = () => {
                         tickFormatter={(value) => `${value}K`}
                         width={45}
                       />
+                      <Tooltip content={<CustomTooltip />} />
                       <ReferenceLine
                         x="15"
                         y={30}
@@ -305,6 +303,132 @@ const DashboardMain = () => {
                     </tr>
                   </tbody>
                 </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Section Transactions */}
+        <div className="mb-12">
+          <h2 className="text-2xl font-medium text-gray-900 mb-6">Transactions</h2>
+          
+          {/* Filtres */}
+          <div className="flex gap-4 mb-6">
+            <button className="px-8 py-2 bg-green-500 text-white rounded-lg font-medium">
+              Actifs
+            </button>
+            <button className="px-8 py-2 text-gray-500 hover:bg-gray-100 rounded-lg font-medium">
+              En attente (1)
+            </button>
+            <button className="px-8 py-2 text-gray-500 hover:bg-gray-100 rounded-lg font-medium">
+              Clos
+            </button>
+          </div>
+
+          {/* Grille de transactions */}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            {/* État */}
+            <div className="bg-white rounded-xl p-6">
+              <h3 className="text-lg font-medium text-gray-900 mb-4">État</h3>
+              <div className="space-y-4">
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-600">Prêt Société</span>
+                  <span className="text-green-500 flex items-center">
+                    Validé
+                    <svg className="w-5 h-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                  </span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-600">Prêt HotDoggs</span>
+                  <span className="text-blue-600 flex items-center">
+                    En attente
+                    <svg className="w-5 h-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
+                    </svg>
+                  </span>
+                </div>
+                <div className="pt-4">
+                  <button className="text-gray-600 hover:text-gray-900 text-sm font-medium underline">
+                    Créer un nouveau dossier
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            {/* Prêt Société */}
+            <div className="bg-white rounded-xl p-6">
+              <h3 className="text-lg font-medium text-gray-900 mb-4">Prêt Société</h3>
+              <div className="flex flex-col h-full">
+                <div className="text-4xl font-bold text-gray-900 mb-2">39 234€</div>
+                <div className="text-sm text-gray-500 mb-4">Montant du prêt en cours</div>
+                <div className="flex items-center text-green-500 mt-auto">
+                  <svg className="w-5 h-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  Prêt validé
+                </div>
+              </div>
+            </div>
+
+            {/* En attente */}
+            <div className="bg-white rounded-xl p-6">
+              <h3 className="text-lg font-medium text-gray-900 mb-4">En attente</h3>
+              <div className="flex flex-col h-full">
+                <div className="relative w-32 h-32 mx-auto mb-4">
+                  <div className="absolute inset-0">
+                    <svg viewBox="0 0 100 100" className="transform -rotate-90">
+                      <circle cx="50" cy="50" r="45" fill="none" stroke="#E5E7EB" strokeWidth="10"/>
+                      <circle cx="50" cy="50" r="45" fill="none" stroke="#4ADE80" strokeWidth="10" strokeDasharray="220" strokeDashoffset="50"/>
+                    </svg>
+                  </div>
+                </div>
+                <div className="space-y-2">
+                  <div className="flex items-center">
+                    <svg className="w-5 h-5 text-green-500 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    <span className="text-sm text-gray-600">Accord ouverture</span>
+                  </div>
+                  <div className="flex items-center">
+                    <svg className="w-5 h-5 text-green-500 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    <span className="text-sm text-gray-600">Accord demande</span>
+                  </div>
+                  <div className="flex items-center">
+                    <svg className="w-5 h-5 text-green-500 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    <span className="text-sm text-gray-600">Evaluation des risques</span>
+                  </div>
+                </div>
+                <div className="mt-4">
+                  <p className="text-sm text-gray-600">Pour déclencher la prochaine étape de validation, veuillez nous joindre :</p>
+                  <div className="flex items-center mt-2 text-sm text-gray-600">
+                    <svg className="w-5 h-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clipRule="evenodd" />
+                    </svg>
+                    Dossier super important.pdf
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Cloturé */}
+            <div className="bg-white rounded-lg p-6 shadow-sm">
+              <div className="flex flex-col items-center">
+                <Image
+                  src="/images/trophy.png"
+                  alt="Trophy"
+                  width={96}
+                  height={96}
+                  className="mb-4"
+                  priority
+                />
+                <h3 className="text-lg font-medium text-gray-900">Cloturé</h3>
+                <p className="mt-2 text-sm text-gray-500">Clôture estimée le 13/06/2022</p>
               </div>
             </div>
           </div>

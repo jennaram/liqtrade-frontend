@@ -29,7 +29,7 @@ const HeroSection = () => {
       </div>
       <div className="w-full md:w-1/2 relative">
         <Image 
-          src="/images/app_img.png" 
+          src="/images/app.png" 
           alt="Application mobile Liqtrade" 
           width={500} 
           height={600}

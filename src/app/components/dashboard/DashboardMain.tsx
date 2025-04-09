@@ -313,14 +313,14 @@ const DashboardMain = () => {
           <h2 className="text-2xl font-medium text-gray-900 mb-6">Transactions</h2>
           
           {/* Filtres */}
-          <div className="flex gap-4 mb-6">
-            <button className="px-8 py-2 bg-green-500 text-white rounded-lg font-medium">
+          <div className="flex gap-0 mb-6">
+            <button className="px-8 py-2 bg-green-500 text-white rounded-l-lg font-medium hover:bg-white hover:text-green-500 transition-colors duration-200">
               Actifs
             </button>
-            <button className="px-8 py-2 text-gray-500 hover:bg-gray-100 rounded-lg font-medium">
+            <button className="px-8 py-2 text-gray-500 bg-gray-100 hover:bg-white hover:text-gray-900 transition-colors duration-200 font-medium">
               En attente (1)
             </button>
-            <button className="px-8 py-2 text-gray-500 hover:bg-gray-100 rounded-lg font-medium">
+            <button className="px-8 py-2 text-gray-500 bg-gray-100 rounded-r-lg hover:bg-white hover:text-gray-900 transition-colors duration-200 font-medium">
               Clos
             </button>
           </div>

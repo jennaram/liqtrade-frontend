@@ -11,6 +11,9 @@ const ServicesSection = () => {
           <Link href="/affacturage" className="text-xl md:text-2xl font-medium flex items-center text-gray-400 justify-center md:justify-start group">
             Affacturage <span className="ml-2 text-2xl group-hover:translate-x-1 transition-transform">→</span>
           </Link>
+          <div className="mt-8 flex justify-center">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/H0HFlDtmzfc?si=yPLeeQj3cSlyCX97" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+          </div>
         </div>
         <div className="md:max-w-xl">
           <p className="text-gray-800 text-lg mb-2 text-center md:text-left">Des taux compétitifs en quelques clics.</p>

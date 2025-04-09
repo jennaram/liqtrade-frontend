@@ -1,6 +1,8 @@
 import { PencilIcon } from '@heroicons/react/24/solid';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, ResponsiveContainer, ReferenceLine, Label, Tooltip } from 'recharts';
 import Image from 'next/image';
+import React, { useState } from 'react';
+import Link from 'next/link';
 
 const data = [
   { name: '1', value1: 10, value2: 2, value3: 2 },
@@ -32,6 +34,12 @@ const CustomTooltip = ({ active, payload }: TooltipProps) => {
 };
 
 const DashboardMain = () => {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  const togglePopup = () => {
+    setIsPopupOpen(!isPopupOpen);
+  };
+
   return (
     <main className="flex-1 bg-gray-50">
       <div className="max-w-7xl mx-auto px-8 pt-12">

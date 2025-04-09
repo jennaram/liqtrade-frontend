@@ -31,6 +31,9 @@ const CustomTooltip = ({ active, payload }: TooltipProps) => {
 };
 
 const DashboardMain = () => {
+  // Générer un nombre aléatoire entre 1000 et 9999
+  const randomAmount = Math.floor(Math.random() * 9000 + 1000);
+  
   return (
     <main className="flex-1 bg-gray-50">
       <div className="max-w-7xl mx-auto px-8 pt-12">
@@ -135,18 +138,46 @@ const DashboardMain = () => {
                       ticks={[0, 10, 20, 30, 40, 50]}
                       domain={[0, 50]}
                       tickFormatter={(value) => `${value}K`}
+                      width={45}
                     />
-                    <Tooltip content={<CustomTooltip />} />
+                    <Tooltip 
+                      content={<CustomTooltip />} 
+                      cursor={false}
+                      active={false}
+                    />
                     <ReferenceLine
-                      x="15"
-                      y={30}
+                      x="12.5"
+                      y={25}
                       stroke="#6B7280"
                       strokeDasharray="3 3"
                     >
                       <Label
-                        value="2973€"
-                        position="right"
-                        fill="#000000"
+                        content={({ x, y }) => {
+                          const xPos = typeof x === 'number' ? x + 30 : (parseFloat(x as string) + 30);
+                          return (
+                            <g transform={`translate(${xPos},${y})`}>
+                              <rect
+                                x="-30"
+                                y="-12"
+                                width="60"
+                                height="24"
+                                rx="12"
+                                fill="white"
+                                stroke="#E5E7EB"
+                              />
+                              <text
+                                x="0"
+                                y="4"
+                                textAnchor="middle"
+                                fill="#374151"
+                                fontSize="12"
+                                fontFamily="sans-serif"
+                              >
+                                {`${randomAmount}K€`}
+                              </text>
+                            </g>
+                          );
+                        }}
                       />
                     </ReferenceLine>
                     <Line 

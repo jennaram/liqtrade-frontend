@@ -217,16 +217,16 @@ const DashboardMain = () => {
             {/* Tableau */}
             <div className="md:col-span-3 bg-white rounded-xl p-6 h-[300px] flex flex-col">
               <div className="grid grid-cols-4 mb-2">
-                <button className="bg-gray-100 text-gray-900 rounded-l-lg text-sm font-medium py-2 border-r border-white">
+                <button className="bg-gray-100 hover:bg-indigo-100 hover:text-indigo-900 transition-colors duration-200 text-gray-900 rounded-l-lg text-sm font-medium py-2 border-r border-white cursor-pointer">
                   Euribor1w
                 </button>
-                <button className="bg-gray-100 text-gray-500 text-sm font-medium py-2 border-r border-white">
+                <button className="bg-gray-100 hover:bg-indigo-100 hover:text-indigo-900 transition-colors duration-200 text-gray-500 text-sm font-medium py-2 border-r border-white cursor-pointer">
                   Euribor2w
                 </button>
-                <button className="bg-gray-100 text-gray-500 text-sm font-medium py-2 border-r border-white">
+                <button className="bg-gray-100 hover:bg-indigo-100 hover:text-indigo-900 transition-colors duration-200 text-gray-500 text-sm font-medium py-2 border-r border-white cursor-pointer">
                   Euribor3w
                 </button>
-                <button className="bg-gray-100 text-gray-500 rounded-r-lg text-sm font-medium py-2">
+                <button className="bg-gray-100 hover:bg-indigo-100 hover:text-indigo-900 transition-colors duration-200 text-gray-500 rounded-r-lg text-sm font-medium py-2 cursor-pointer">
                   Average Sector Spread
                 </button>
               </div>
@@ -242,22 +242,22 @@ const DashboardMain = () => {
                   </colgroup>
                   <thead>
                     <tr className="border-b">
-                      <th className="text-left py-1 font-medium text-blue-800">
+                      <th className="text-left py-1 font-medium text-blue-900 text-xs">
                         Tenor
                       </th>
-                      <th className="text-left py-1 font-medium text-blue-800">
+                      <th className="text-center py-1 font-medium text-blue-900 text-xs">
                         Market Place
                       </th>
-                      <th className="text-left py-1 font-medium text-blue-800">
+                      <th className="text-center py-1 font-medium text-blue-900 text-xs whitespace-nowrap">
                         Market Risk Free<br/>Date
                       </th>
-                      <th className="text-left py-1 font-medium text-blue-800">
+                      <th className="text-center py-1 font-medium text-blue-900 text-xs whitespace-nowrap">
                         Market Risk Free<br/>Premium
                       </th>
-                      <th className="text-left py-1 font-medium text-blue-800">
+                      <th className="text-center py-1 font-medium text-blue-900 text-xs">
                         Change %
                       </th>
-                      <th className="text-left py-1 font-medium text-blue-800">
+                      <th className="text-center py-1 font-medium text-blue-900 text-xs">
                         Variation
                       </th>
                     </tr>
@@ -265,43 +265,43 @@ const DashboardMain = () => {
                   <tbody>
                     <tr>
                       <td className="border-b py-2">7 DAYS</td>
-                      <td className="border-b py-2">0.0000</td>
-                      <td className="border-b py-2">0</td>
-                      <td className="border-b py-2">0.0000</td>
-                      <td className="border-b py-2">0.0000</td>
-                      <td className="border-b py-2">1</td>
+                      <td className="border-b py-2 text-center">0.0000</td>
+                      <td className="border-b py-2 text-center">0</td>
+                      <td className="border-b py-2 text-center">0.0000</td>
+                      <td className="border-b py-2 text-center">0.0000</td>
+                      <td className="border-b py-2 text-center">1</td>
                     </tr>
                     <tr>
                       <td className="border-b py-2">30 DAYS</td>
-                      <td className="border-b py-2">0.0000</td>
-                      <td className="border-b py-2">0</td>
-                      <td className="border-b py-2">0.0000</td>
-                      <td className="border-b py-2">0.0000</td>
-                      <td className="border-b py-2">9</td>
+                      <td className="border-b py-2 text-center">0.0000</td>
+                      <td className="border-b py-2 text-center">0</td>
+                      <td className="border-b py-2 text-center">0.0000</td>
+                      <td className="border-b py-2 text-center">0.0000</td>
+                      <td className="border-b py-2 text-center">9</td>
                     </tr>
                     <tr>
                       <td className="border-b py-2">90 DAYS</td>
-                      <td className="border-b py-2">0.0300</td>
-                      <td className="border-b py-2">0.02345</td>
-                      <td className="border-b py-2">0.0300</td>
-                      <td className="border-b py-2">0.0300</td>
-                      <td className="border-b py-2">0.02345</td>
+                      <td className="border-b py-2 text-center">0.0300</td>
+                      <td className="border-b py-2 text-center">0.02345</td>
+                      <td className="border-b py-2 text-center">0.0300</td>
+                      <td className="border-b py-2 text-center">0.0300</td>
+                      <td className="border-b py-2 text-center">0.02345</td>
                     </tr>
                     <tr>
                       <td className="border-b py-2">180 DAYS</td>
-                      <td className="border-b py-2">0.03500</td>
-                      <td className="border-b py-2">0.03500</td>
-                      <td className="border-b py-2">0.03500</td>
-                      <td className="border-b py-2">0.03500</td>
-                      <td className="border-b py-2">0.03500</td>
+                      <td className="border-b py-2 text-center">0.03500</td>
+                      <td className="border-b py-2 text-center">0.03500</td>
+                      <td className="border-b py-2 text-center">0.03500</td>
+                      <td className="border-b py-2 text-center">0.03500</td>
+                      <td className="border-b py-2 text-center">0.03500</td>
                     </tr>
                     <tr>
                       <td className="py-2">360 DAYS</td>
-                      <td className="py-2">0.004400</td>
-                      <td className="py-2">0.004400</td>
-                      <td className="py-2">0.004400</td>
-                      <td className="py-2">0.004400</td>
-                      <td className="py-2">0.004400</td>
+                      <td className="py-2 text-center">0.004400</td>
+                      <td className="py-2 text-center">0.004400</td>
+                      <td className="py-2 text-center">0.004400</td>
+                      <td className="py-2 text-center">0.004400</td>
+                      <td className="py-2 text-center">0.004400</td>
                     </tr>
                   </tbody>
                 </table>
